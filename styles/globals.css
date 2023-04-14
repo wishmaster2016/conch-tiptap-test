@@ -1,0 +1,654 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;700;900&display=swap");
+
+.layoutRoot {
+  background: linear-gradient(153.76deg, #EDE9FE 1%, #fdfada 20.46%, #EDE9FE 45.51%, #D6C8FF 67.2%, #AE93FF 90.71%);
+  min-height: 100%;
+  overflow-x: hidden;
+}
+
+
+.layoutApp {
+  background: linear-gradient(153.76deg, #EDE9FE 1%, #fdfada 20.46%, #EDE9FE 45.51%, #D6C8FF 67.2%, #AE93FF 90.71%);
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+.hideDrawer {
+  transform: translateX(-5000px);
+}
+
+.resultsCard {
+  background: #FFFFFF;
+  border: 1px solid rgba(213, 213, 213, 0.3);
+  /* mainShadow */
+  --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  border-radius: 24px;
+}
+
+
+.rewriteAllButton {
+  border: 4px solid #000000;
+  border-radius: 20px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 16px;
+}
+
+.rewriteAllButton p {
+  height: 44px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 44px;
+  /* identical to box height */
+  color: #FFFFFF;
+}
+
+.rewriteButton {
+  background: #000000;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 16px;
+  border: 4px solid rgba(0, 0, 0, 1);
+}
+
+.rewriteOptionCard,
+.rewriteSentenceCard,
+.textImprovementCard,
+.grammarCard {
+  width: 100%;
+  /* offwhite */
+  background: #FFFFFF;
+  /* mainShadow */
+  border-radius: 16px;
+}
+
+
+.rewriteOptionCard,
+.rewriteSentenceCard {
+  box-shadow: 2px 2px 10px rgb(255, 171, 171);
+}
+
+.grammarCard {
+  box-shadow: 2px 2px 10px rgb(254, 249, 204);
+}
+
+.textImprovementCard {
+  box-shadow: 2px 2px 10px rgb(121, 184, 216);
+}
+
+
+
+.rewriteButton {
+  background: #000000;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 16px;
+  border: 1px solid rgba(213, 213, 213, 0.3);
+}
+
+.blackButton {
+  background: #000000;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
+  border: 1px solid rgba(213, 213, 213, 0.3);
+  color: #fff;
+  padding: 0.15rem 0.55rem;
+  font-size: 0.9rem;
+}
+
+
+.wordCount {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  color: #6B6B6B;
+}
+
+.rewriteItemsList {
+  max-height: 90rem;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-bottom: 32px;
+}
+
+/* ********* TIPTAP EDITOR ********* */
+
+.textEditor {
+  width: 100%;
+}
+
+/* TitTap Editor Design */
+.ProseMirror {
+  min-width: 100%;
+  width: 100%;
+  max-width: 100%;
+  height: 70vh;
+  padding: 10px;
+  background: white;
+  overflow-y: auto;
+  border: 1px solid rgb(219, 219, 219);
+  border-radius: 12px;
+  --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.textEditor .webApp .ProseMirror {
+  height: 60vh;
+}
+
+.textEditorApp .webApp .ProseMirror {
+  height: 70vh
+}
+
+.textEditor {
+  border-radius: 12px;
+  min-height: 80vh;
+}
+
+.mobileTextEditor {
+  border-radius: 12px;
+  height: 67vh;
+  overflow-y: auto;
+}
+
+.mobileTextEditor * {
+  user-select: none;
+}
+
+.initial-editor .mobileTextEditor div .ProseMirror {
+  min-height: 30%;
+  height: 44vh;
+}
+
+.ProseMirror:focus {
+  min-width: 100%;
+  width: 100%;
+  max-width: 100%;
+  height: 70vh;
+  padding: 10px;
+  background: white;
+  overflow-y: auto;
+  border: 1px solid rgb(219, 219, 219);
+  border-radius: 12px;
+  --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  outline: none;
+}
+
+.ProseMirror>*+* {
+  margin-top: 0.75em;
+}
+
+.ProseMirror ul,
+.ProseMirror ol {
+  padding: 0 2rem;
+}
+
+.ProseMirror h1,
+.ProseMirror h2,
+.ProseMirror h3,
+.ProseMirror h4,
+.ProseMirror h5,
+.ProseMirror h6 {
+  line-height: 1.1;
+}
+
+.ProseMirror code {
+  background-color: rgba(#616161, 0.1);
+  color: #616161;
+}
+
+.ProseMirror pre {
+  background: #0d0d0d;
+  color: #fff;
+  font-family: "JetBrainsMono", monospace;
+  padding: 0.75rem 1rem;
+  border-radius: 0rem;
+}
+
+.ProseMirror code {
+  color: inherit;
+  padding: 0;
+  background: none;
+  font-size: 0.8rem;
+}
+
+.ProseMirror img {
+  max-width: 100%;
+  height: auto;
+}
+
+.ProseMirror blockquote {
+  padding-left: 1rem;
+  border-left: 3px solid #999999;
+}
+
+.ProseMirror hr {
+  border: none;
+  border-top: 3px solid #999999;
+  margin: 2rem 0;
+}
+
+/* ............................ */
+
+.menuBar {
+  padding-bottom: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menuBar button {
+  font-size: 18px;
+  margin: 7px;
+  margin-right: 15px;
+  outline: none;
+  border: none;
+  background: none;
+  color: rgb(70, 70, 70);
+  cursor: pointer;
+}
+
+.menuBar button:last-child {
+  margin-right: 7px;
+}
+
+.mobileMenuBar {
+  padding-bottom: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mobileMenuBar button {
+  font-size: 13px;
+  margin: 7px;
+  margin-right: 15px;
+  outline: none;
+  border: none;
+  background: none;
+  color: rgb(70, 70, 70);
+  cursor: pointer;
+}
+
+.mobileMenuBar button:last-child {
+  margin-right: 7px;
+}
+
+.heading3 {
+  font-size: 15px;
+}
+
+button.is_active {
+  background: rgb(197, 197, 197);
+  padding: 2px 3px;
+  border-radius: 2px;
+}
+
+/* Text Inside Editor */
+.ProseMirror p {
+  font-size: 18px;
+  line-height: 260%;
+}
+
+._loading_overlay_overlay {
+  height: 100vh !important;
+  position: fixed !important;
+}
+
+mark {
+  cursor: pointer;
+}
+
+.strokeText {
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+
+/* The initial editor that is shown on bypass*/
+.initial-editor .textEditor div .ProseMirror {
+  min-height: 50%;
+  height: 44vh;
+}
+
+/* Popover*/
+.conch-popover {
+  width: 100%;
+  height: 218px;
+  background-color: white;
+  background-image: url("https://uploads-ssl.webflow.com/63a7a163ddf22763cf2b08d0/63ddc4cc2ae9b0060fb7cb33_chromebackground.png");
+  overflow-y: auto;
+  overflow-x: hidden;
+  width: 395px;
+}
+
+.conch-popover-large {
+  height: 265px;
+  width: 400px;
+  padding: 12px 20px;
+  background-color: white;
+  background-image: url("https://uploads-ssl.webflow.com/640a33beae818a6d965fa204/640a33beae818a0d0b5fa2bb_largechromextension.png");
+  box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.2);
+  scrollbar-width: none;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.popover-textarea {
+  border: none;
+  overflow: auto;
+  outline: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  resize: none;
+  font-size: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  width: 100%;
+  border-radius: 8px;
+  height: 100px !important;
+  background: linear-gradient(180deg,
+      #ffffff 0%,
+      #ffffff 0.01%,
+      rgba(255, 255, 255, 0.37) 100%);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 8px 12px 12px 12px;
+  font-size: 12px;
+}
+
+.popover-textarea-small {
+  border: none;
+  overflow: auto;
+  outline: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  resize: none;
+  font-size: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  width: 100%;
+  border-radius: 8px;
+  background: linear-gradient(180deg,
+      #ffffff 0%,
+      #ffffff 0.01%,
+      rgba(255, 255, 255, 0.37) 100%);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 8px 12px 10px 12px;
+  font-size: 12px;
+}
+
+.citationPopoverCard {
+  width: 100%;
+  height: 100%;
+  box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
+  background-image: url("../assets/components/citationBox.png");
+}
+
+.text-select-toolbar-wrapper {
+  opacity: 0.85;
+}
+
+/* Globals CSS */
+.text-select-toolbar {
+  position: relative;
+  box-sizing: border-box;
+  color: #000;
+  background: linear-gradient(180deg,
+      #ffffff 80%,
+      #ffffff 90%,
+      rgba(255, 255, 255, 0.61) 100%);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background-clip: padding-box;
+  /* Important: the px value here must match margin (but with negative added to it). 1px = -1px*/
+  border: solid 1px transparent;
+  /* Main CSS*/
+  width: fit-content;
+  height: 30px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 3px 12px;
+  gap: 12px;
+  padding: 3px 12px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* Pseudo element that creates the border */
+.text-select-toolbar:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  margin: -1px;
+  /* !importanté */
+  border-radius: inherit;
+  /* !importanté */
+  background: linear-gradient(259.48deg,
+      rgba(255, 255, 255, 0.08) 11.43%,
+      rgba(241, 205, 205, 0.085625) 32.77%,
+      rgba(241, 205, 205, 0.16) 32.78%,
+      rgba(204, 76, 76, 0.1) 87.3%),
+    linear-gradient(94.98deg,
+      rgba(194, 129, 250, 0.6) 18.82%,
+      rgba(146, 130, 252, 0.49) 40.93%,
+      #9382fd 58.9%,
+      rgba(248, 117, 210, 0.51) 68.11%,
+      rgba(247, 136, 176, 0.53) 79.52%,
+      #f6968f 84.71%,
+      rgba(247, 122, 209, 0.71) 91.61%,
+      rgba(255, 236, 253, 0.841081) 93.92%);
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.penora-loader {
+  border: 2px solid #000000;
+  /* Light grey */
+  border-top: 2px solid #ffffff;
+  /* Blue */
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  animation: spin 2s linear infinite;
+  margin-top: 2px;
+  display: inline-block;
+}
+
+.conch-popover-input {
+  border-radius: 8px;
+  background: linear-gradient(180deg,
+      #ffffff 0%,
+      #ffffff 0.01%,
+      rgba(255, 255, 255, 0.37) 100%);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 8px 12px 12px 12px;
+  font-size: 12px;
+  border-radius: 8px;
+  height: 0px;
+  background: linear-gradient(180deg,
+      #ffffff 0%,
+      #ffffff 0.01%,
+      rgba(255, 255, 255, 0.37) 100%);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.conch-popover-label {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.conch-popover-select {
+  font-family: "Montserrat";
+  border-radius: 8px;
+  background: linear-gradient(180deg,
+      #ffffff 0%,
+      #ffffff 0.01%,
+      rgba(255, 255, 255, 0.37) 100%);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  font-size: 12px;
+}
+
+.penora-templates-options-section {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.ProseMirror p.is-editor-empty:first-child::before {
+  color: #adb5bd;
+  content: attr(data-placeholder);
+  float: left;
+  height: 0;
+  pointer-events: none;
+}
+
+.ProseMirror p.is-empty::before {
+  color: #adb5bd;
+  content: attr(data-placeholder);
+  float: left;
+  height: 0;
+  pointer-events: none;
+}
+
+.react-renderer {
+  display: inline;
+}
+
+.node-view {
+  color: grey;
+  display: inline;
+}
+
+.tiptap-paragraph {
+  display: inline;
+}
+
+.PhoneInput--focus {
+  outline: none;
+  border: none;
+  overflow: auto;
+  outline: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  resize: none;
+  font-size: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  width: 100%;
+  border-radius: 8px;
+}
+
+.PhoneInput {
+  width: 345px;
+  --PhoneInputCountrySelectArrow-color: #000000;
+  --PhoneInputCountrySelectArrow-opacity: 1;
+}
+
+.PhoneInputInput {
+  outline: none;
+  border: none;
+  overflow: auto;
+  outline: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  resize: none;
+  font-size: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  width: 100%;
+  border-radius: 8px;
+}
+
+.drawerQuestionCircle {
+  position: absolute;
+  left: -5%;
+  bottom: 1.5%;
+}
+
+.loadingContainer {
+  display: inline-flex;
+}
+
+.loadingDots {
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  margin: 0 3px;
+  background-color: #464DCF;
+  animation: loading 1s ease-in-out infinite;
+}
+
+.loading-dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.loading-dot:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes loading {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.5);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.infoDiv {
+  max-width: 400px;
+  margin: -350px 50px;
+  padding: 10px 20px;
+  background: white;
+  border-radius: 10px;
+  text-align: center;
+  position: absolute;
+  text-align: left;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+.infoDivMobile {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  max-width: 400px;
+  margin: -60px 115px;
+  padding: 10px 20px;
+  background: white;
+  border-radius: 20px;
+  text-align: center;
+  position: absolute;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+.infoDiv p {
+  color: #444;
+  font-weight: bold;
+}

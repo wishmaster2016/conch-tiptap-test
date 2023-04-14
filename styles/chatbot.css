@@ -1,0 +1,70 @@
+.react-chatbot-kit-chat-container {
+  width: 500px !important;
+}
+
+.app-chatbot-button {
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  border: none;
+  position: fixed;
+  bottom: 35px;
+  z-index: 9999;
+  right: 6%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.6s ease-in-out;
+  /* add shadow */
+  box-shadow: 5px 5px 13px rgba(91, 81, 81, 0.4);
+}
+.app-chatbot-button:hover {
+  transform: scale(1.1);
+}
+.app-chatbot-container {
+  margin: 40px 0;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  right: 6%;
+  bottom: 70px;
+  z-index: 9999;
+  box-shadow: 5px 5px 13px rgba(91, 81, 81, 0.4);
+  border-radius: 5px;
+}
+.app-chatbot-button-icon {
+  fill: #fff;
+  padding: 0.3rem;
+}
+
+/* Header */
+.react-chatbot-kit-header {
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  background-color: #efefef;
+  font-family: Arial;
+  display: flex;
+  align-items: center;
+  font-size: 0.85rem;
+  color: #514f4f;
+  padding: 12.5px;
+  font-weight: bold;
+}
+
+/* Bot message */
+.react-chatbot-kit-chat-bot-message {
+  margin-left: 10px !important;
+  min-width: 55%;
+  max-width: 90%;
+}
+
+.react-chatbot-kit-chat-btn-send {
+}
+
+
+/* MOBILE CSS */
+@media only screen and (max-width: 600px) {
+  .react-chatbot-kit-chat-container {
+    width: 80vw !important;
+  }
+}
