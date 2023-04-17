@@ -204,6 +204,7 @@ export const Tiptap = ({
       setTextString(text);
 
       addListenerToHighlights();
+      localStorage.setItem('lastSuggestedTextUpdate', 'false');
 
       // add a debouncer to save the text
       saveDocumentDebounced(html, currDocument);

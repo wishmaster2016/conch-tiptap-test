@@ -1,3 +1,9 @@
+## Message
+
+Hello,
+
+Your upwork job post has been set to private not long ago, but I have completed the test task and I'd like you to review the work and if you're pleased with the result, please contact me on this email address: bliznyuk.sergei@gmail.com
+
 ## Problem
 
 The problem statement is on the posted job.
@@ -5,7 +11,6 @@ The problem statement is on the posted job.
 The file to be modified is `pages/index.tsx` and the text-editor components in `components/text-editor/tiptap.jsx` (`nonEditableText.tsx` and `nonEditableTextView.tsx` contain the ghost text logic for the editor).
 
 Feel free to modify files as you wish to solve the problem.
-
 
 ### Frameworks
 

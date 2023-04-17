@@ -238,7 +238,13 @@ export default function LandingPage() {
   useEffect(() => {
     const timer = setTimeout(
       (editor) => {
-        if (editor && suggestText.current && textString) {
+        const shouldCallApi = localStorage.getItem('lastSuggestedTextUpdate');
+        if (
+          shouldCallApi !== 'true' &&
+          editor &&
+          suggestText.current &&
+          textString
+        ) {
           const cursorLine = editor?.view.state.selection.$anchor.pos + 2;
           editor.commands.insertContent(`<react-component></react-component>`);
           editor.chain().focus().setTextSelection(cursorLine).run();

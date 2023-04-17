@@ -22,20 +22,39 @@ export default Node.create({
 
   addKeyboardShortcuts() {
     return {
+      'ArrowLeft': () => {
+        if (window.location.pathname.includes('app')) {
+          mixpanel.track('typed arrow left');
+        } else {
+          mixpanel.track('Demo typed arrow left');
+        }
+
+        localStorage.setItem('nextSentenceText', '');
+        localStorage.setItem('lastSuggestedTextUpdate', 'true');
+        this.editor
+          .chain()
+          .focus()
+          .setTextSelection(this.editor.view.state.selection.$anchor.pos - 1)
+          .run();
+
+        return true;
+      },
       'ArrowRight': () => {
         if (window.location.pathname.includes("app")) {
           mixpanel.track("typed arrow right");
         } else {
           mixpanel.track("Demo typed arrow right");
         }
-        
+
         if(!window.getSelection()?.toString()) {
           const text = localStorage.getItem("nextSentenceText") || "";
 
-          if(this.editor.commands.deleteNode("reactComponent")){
-            this.editor.commands.insertContent(" " + text)
-          }else{
-            this.editor.chain().focus().setTextSelection(this.editor.view.state.selection.$anchor.pos + 1).run()
+          if (this.editor.commands.deleteNode('reactComponent')) {
+            this.editor.commands.insertContent(` ${text}`);
+            localStorage.setItem('nextSentenceText', '');
+            localStorage.setItem('lastSuggestedTextUpdate', 'true');
+          } else {
+            this.editor.chain().focus().setTextSelection(this.editor.view.state.selection.$anchor.pos + 1).run();
           }
         }
         return true;
@@ -56,7 +75,7 @@ export default Node.create({
             this.editor.commands.setHardBreak()
           }
         }
-        
+
         return true;
       },
       'Mod-j': () => {
